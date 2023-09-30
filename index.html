@@ -7,69 +7,77 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <div>
-      <input
-        id="line-width"
-        type="range"
-        min="1"
-        max="10"
-        value="5"
-        step="0.5"
-      />
-      <input type="color" id="color" />
-      <div
-        class="color-option"
-        style="background-color: #4bcffa"
-        data-color="#4bcffa"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #ff5e57"
-        data-color="#ff5e57"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #ffdd59"
-        data-color="#ffdd59"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #575fcf"
-        data-color="#575fcf"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #ef5777"
-        data-color="#ef5777"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #ffcccc"
-        data-color="#ffcccc"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #cd84f1"
-        data-color="#cd84f1"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #fab1a0"
-        data-color="#fab1a0"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #55efc4"
-        data-color="#55efc4"
-      ></div>
+    <div class="wrap">
+      <div class="color">
+        <input type="color" class="color__select" />
+        <div
+          class="color__option"
+          style="background-color: #4bcffa"
+          data-color="#4bcffa"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #ff5e57"
+          data-color="#ff5e57"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #ffdd59"
+          data-color="#ffdd59"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #575fcf"
+          data-color="#575fcf"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #ef5777"
+          data-color="#ef5777"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #ffcccc"
+          data-color="#ffcccc"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #cd84f1"
+          data-color="#cd84f1"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #fab1a0"
+          data-color="#fab1a0"
+        ></div>
+        <div
+          class="color__option"
+          style="background-color: #55efc4"
+          data-color="#55efc4"
+        ></div>
+      </div>
+      <canvas></canvas>
+      <div class="tool">
+        <input
+          class="tool__line-width"
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          step="0.5"
+        />
+        <button class="tool__mode">Fill</button>
+        <button class="tool__reset">Reset</button>
+        <button class="tool__erase">Erase</button>
+        <input type="file" accept="image/*" class="tool__file" />
+        <input
+          type="text"
+          placeholder="Write and then double click"
+          class="tool__text"
+        />
+        <button class="tool__save">Save Image</button>
+      </div>
     </div>
-    <button id="mode-btn">Fill</button>
-    <button id="reset-btn">Reset</button>
-    <button id="eraser-btn">Erase</button>
-    <input type="file" accept="image/*" id="file" />
-    <input type="text" placeholder="Write and then double click" id="text" />
-    <button id="save">Save Image</button>
     <script src="js/app.js"></script>
   </body>
 </html>

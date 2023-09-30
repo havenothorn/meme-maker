@@ -1,14 +1,14 @@
-const saveBtn = document.getElementById("save");
-const textInput = document.getElementById("text");
-const fileInput = document.getElementById("file");
-const modeBtn = document.getElementById("mode-btn");
-const resetBtn = document.getElementById("reset-btn");
-const eraseBtn = document.getElementById("eraser-btn");
+const saveBtn = document.querySelector(".tool__save");
+const textInput = document.querySelector(".tool__text");
+const fileInput = document.querySelector(".tool__file");
+const modeBtn = document.querySelector(".tool__mode");
+const resetBtn = document.querySelector(".tool__reset");
+const eraseBtn = document.querySelector(".tool__erase");
 const colorOptions = Array.from(
-  document.getElementsByClassName("color-option")
+  document.getElementsByClassName("color__option")
 );
-const color = document.getElementById("color");
-const lineWidth = document.getElementById("line-width");
+const color = document.querySelector(".color__select");
+const lineWidth = document.querySelector(".tool__line-width");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
