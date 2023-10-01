@@ -1,6 +1,7 @@
 const saveBtn = document.querySelector(".tool__save");
 const textInput = document.querySelector(".tool__text");
 const fileInput = document.querySelector(".tool__file");
+const fileChoice = document.querySelector(".tool__file-choice");
 const modeBtn = document.querySelector(".tool__mode");
 const resetBtn = document.querySelector(".tool__reset");
 const eraseBtn = document.querySelector(".tool__erase");
@@ -59,10 +60,10 @@ function onColorClick(event) {
 function onModeClick() {
   if (isFilling) {
     isFilling = false;
-    modeBtn.innerText = "Fill";
+    modeBtn.innerText = "Fill 🌊";
   } else {
     isFilling = true;
-    modeBtn.innerText = "Draw";
+    modeBtn.innerText = "Draw 🖌️";
   }
 }
 
@@ -81,6 +82,10 @@ function onEraserClick() {
   ctx.strokeStyle = "#fff";
   isFilling = false;
   modeBtn.innerText = "Fill";
+}
+
+function fileInputClick() {
+  fileInput.click();
 }
 
 function onFileChange(event) {
@@ -129,5 +134,6 @@ modeBtn.addEventListener("click", onModeClick);
 resetBtn.addEventListener("click", onResetClick);
 eraseBtn.addEventListener("click", onEraserClick);
 
+fileChoice.addEventListener("click", fileInputClick);
 fileInput.addEventListener("change", onFileChange);
 saveBtn.addEventListener("click", onSaveClick);
