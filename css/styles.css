@@ -6,14 +6,14 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  gap: 20px;
-  background-color: gainsboro;
+  gap: 50px;
+  background: url("/img/bg.png");
 }
 
 canvas {
   background-color: #fff;
   border-radius: 10px;
-  border: 1px solid #000;
+  box-shadow: 1px 1px 10px darkgray;
 }
 
 .color {
@@ -21,6 +21,16 @@ canvas {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100px;
+  height: 800px;
+  background-color: #fff;
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 10px darkgray;
+  border-radius: 10px;
+}
+
+.color__title {
+  padding-top: 20px;
 }
 
 .color__option {
@@ -28,23 +38,77 @@ canvas {
   height: 50px;
   border-radius: 50%;
   border: 5px solid #fff;
+  box-shadow: 1px 1px 10px darkgray;
   transition: transform ease-in-out 0.3s;
-  cursor: pointer;
-}
-
-.color__option:hover {
-  transform: scale(1.2);
 }
 
 .color__select {
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  border: 3px solid #fff;
-  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px darkgray;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.color__select::-webkit-color-swatch {
+  border-radius: 50%;
+  border: none;
+}
+
+.color__option:hover,
+.color__select:hover {
+  box-shadow: 1px 1px 10px gray;
 }
 
 .tool {
   display: flex;
   flex-direction: column;
+  width: 180px;
+  padding: 20px 10px;
+  gap: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px darkgray;
+  border-radius: 10px;
+}
+
+.tool__mode,
+.tool__reset,
+.tool__erase,
+.tool__save {
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px darkgray;
+  border-radius: 10px;
+  border: none;
+}
+
+.tool__file-choice {
+  display: block;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px darkgray;
+  border-radius: 10px;
+  border: none;
+}
+
+.tool__file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.tool__save {
+  color: #fff;
+  background-color: rgb(118, 190, 115);
 }
